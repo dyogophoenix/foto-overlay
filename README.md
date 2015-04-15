@@ -22,7 +22,7 @@ Após habilitar o <b>Foto Overlay</b> em seu site insira suas imagens da seguint
 
 ```html
 <figure class="foto-overlay">
-  <img src="URL DA FOTO">
+  <img src="URL_DA_FOTO">
 </figure>
 ```
 
