@@ -1,7 +1,7 @@
 # `Foto Overlay`
 O <b>Foto Overlay</b> é um plugin [JQUERY](https://jquery.com/) que cria uma overlay usando a mesma foto para que ela ocupe todo o espaço necessário mesmo possuindo tamanho menor.
 
-# {Demo}(http://jsfiddle.net/dyogophoenix/j9q5kLgg)
+# [Demo](http://jsfiddle.net/dyogophoenix/j9q5kLgg)
 
 ## Habilitando o plugin em seu site
 Primeiramente hospede o plugin em seu site e depois habilite-o em sua página inserindo os seguintes códigos em seus respectivos lugares:
