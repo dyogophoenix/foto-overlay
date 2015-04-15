@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<title>Exemplos - Foto Overlay</title>
+	<link href="./../css/foto-overlay.css" rel="stylesheet" />
+	<link href="./css/exemplo.css" rel="stylesheet" />
+
+</head>
+<body>
+	<main>
+		<section>
+			<h2>Foto Overlay</h2>
+			<div class="meta">
+				by <a href="http://dyogophoenix.com.br" target="_blank">Dyogo Phoenix</a>
+			</div>
+			
+			<div class="foto-01">
+				<h3>Foto Overlay em Fotos:</h3>
+				<figure class="foto-overlay">
+					<img src="./img/foto01.jpg" alt="">
+				</figure>
+			</div>
+
+			<div class="foto-02">
+				<h3>Foto Overlay em Gifs:</h3>
+				<figure class="foto-overlay">
+					<img src="./img/foto02.gif" alt="">
+				</figure>
+			</div>
+
+			<div class="foto-03">
+				<h3>Usando Foto Overlay em Fotos:</h3>
+				<figure class="foto-overlay max-50">
+					<img src="./img/foto03.png" alt="">
+				</figure>
+
+				<figure class="foto-overlay max-50">
+					<img src="./img/foto03.png" alt="" class="sem-borda">
+				</figure>
+			</div>
+		</section>
+	</main>
+
+	<script src="./../js/jquery.js"></script>
+	<script src="./../js/foto-overlay.js"></script>
+	<script>
+	  $('.foto-overlay').fotoOverlay();
+	</script>
+</body>
+</html>
