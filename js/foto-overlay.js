@@ -1,8 +1,19 @@
+/*! ===================================================
+    # Script Name: Foto Overlay
+    # Version: v3.0
+    # Create in: 28/03/2015
+    # Update in: 13/02/2017
+    # Author: Dyogo Phoenix
+    # Author URL: http://dyogophoenix.com.br/
+    # More info: https://dyogophoenix.github.io/foto-overlay/
+    # License: MIT License
+==================================================== */
+
 (function() { 'use strict',
 
 	// Chamando o fotoOverlay
-	this.fotoOverlay = function(elem, options) {
-		var w = window, d = document, self = this, options = options || {},
+	this.fotoOverlay = function(elem) {
+		var w = window, d = document, self = this, options = {},
 		container = elem ? elem : '.foto-overlay', ctn = d.querySelectorAll(container);
 		
 		// Separando os elementos para configuração individual
