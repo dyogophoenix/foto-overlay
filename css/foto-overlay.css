@@ -1,57 +1,56 @@
-	*[data-foto-overlay] {
-	  padding: 5%;
-	  background: #000;
-	  overflow: hidden;
-	  text-align: center;
-	  position: relative;
-	  z-index: 3;
-	  box-sizing: border-box;
-	  -webkit-box-sizing: border-box;
-	}
+figure[data-foto-overlay] {
+  position: relative;
+  background-color: black;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+  padding: 0;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; }
+  figure[data-foto-overlay]:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -20px;
+    right: -20px;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.75);
+    -o-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.75); }
+  figure[data-foto-overlay] img {
+    position: relative;
+    z-index: 2;
+    border: 0px solid transparent;
+    padding: 0px;
+    background-color: black;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 0;
+    max-width: 100%; }
+  figure[data-foto-overlay][data-effect="true"] {
+    padding: 50px; }
+    figure[data-foto-overlay][data-effect="true"] img {
+      border: 6px solid #FFF;
+      padding: 2px;
+      -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.75);
+      -o-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.75);
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px; }
+  figure[data-foto-overlay]:after {
+    content: '';
+    display: table;
+    clear: both; }
 
-	*[data-foto-overlay]:before {
-	  content: '';
-	  position: absolute;
-	  top: 0;
-	  left: 0;
-	  width: 100%;
-	  height: 100%;
-	  background: transparent url('') no-repeat center center;
-	  background-size: cover;
-	  -webkit-filter: blur(5px);
-	  filter: blur(5px);
-	  box-shadow: inset 0px 0px 100px #000;
-	  z-index: 1;
-	}
-
-	*[data-foto-overlay]:after {
-	  content: '';
-	  background: transparent url('../img/pattern.png');
-	  background-repeat: repeat;
-	  background-position: 0 0;
-	  position: absolute;
-	  top: 0;
-	  left: 0;
-	  width: 100%;
-	  height: 100%;
-	  opacity: 0.05;
-	  z-index: 3;
-	}
-
-	*[data-foto-overlay] > img {
-	  position: relative;
-	  z-index: 6;
-	  background: #000 no-repeat center center;
-	  background-size: cover;
-	  box-shadow: 0px 0px 10px #000;
-	  border: 2px solid #F0F0F0;
-	  padding: 2px;
-	  margin-left: -3px;
-	  max-width: 100%;
-	}
-
-	*[data-foto-overlay] > img.sem-borda {
-	  background: transparent;
-	  box-shadow: 0px 0px 10px transparent;
-	  border: 2px solid transparent;
-	}
+/*# sourceMappingURL=foto-overlay.css.map */

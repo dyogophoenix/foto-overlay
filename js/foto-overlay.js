@@ -1,30 +1,74 @@
-/*  
-    Nome do Plugin: Foto Overlay
-    VersÃ£o do tema: 1.0
-    Criado em: 28/03/2015
-    Autor: Dyogo Phoenix
-    Autor URL: http://dyogophoenix.com.br/
-    Adquirido via: https://github.com/dyogophoenix/foto-overlay
-    Uso sob a licença (CC) BY-NC-ND do Creative Commons 
-    http://creativecommons.org/licenses/by-nd/4.0/deed.pt_BR
-*/
+(function() { 'use strict',
 
-(function( $ ){
-  $.fn.fotoOverlay = function(opcoes) {
-    var tagAtual = this;
+	// Chamando o fotoOverlay
+	this.fotoOverlay = function(elem, options) {
+		var w = window, d = document, self = this, options = options || {},
+		container = elem ? elem : '.foto-overlay', ctn = d.querySelectorAll(container);
+		
+		// Separando os elementos para configuração individual
+		fotoOverlay.prototype.start = function() {
+			if(options.css) delete options.css;
+			options.css = self.myCSS();
+			for (var i = ctn.length - 1; i >= 0; i--) {
+				var atual = ctn[i];
+				atual.number = i;
+				self.check(atual);
+			}
+		}
 
-    var padrao = { }; 
+		// Criando o <style> personalizado para a função
+		fotoOverlay.prototype.myCSS = function(css) {
+			var style = d.createElement('style');
+				style.setAttribute('data-css', 'foto-overlay');
+			d.querySelector('head').appendChild(style);
+			return style;
+		}
 
-    var configurar = $.extend( {}, padrao, opcoes );
+		// Adicionando o texto dentro do <style>...</style>
+		fotoOverlay.prototype.addCSS = function(texto) {
+			if(options.css) {
+				var code = d.createTextNode(texto);
+				options.css.appendChild(code);
+			}
+		}
 
-    $('head').append('<style type="text/css" data-f-over-css></style>');
+		// Checando se os elementos possuem <img> como filho
+		fotoOverlay.prototype.check = function(elem) {
+			for (var i = 0; i < elem.childNodes.length; i++) {
+				if(elem.childNodes[i].tagName == 'IMG') {
+					elem.childNodes[i].number = i;
+					self.init(elem,elem.childNodes[i]);
+					break;
+				}
+			}
+		}
+		
+		// Iniciando a inserção no HTML e CSS
+		fotoOverlay.prototype.init = function(elem, img) {
+			var num = elem.number + 1;
+			elem.setAttribute('data-foto-overlay', num);
+			var photo = img.getAttribute('src');
+			self.addCSS(container +'[data-foto-overlay="'+ num +'"] { background-image: url(\''+ photo +'\') !important; }');
+			self.config(elem,img);
+		}
 
-    return this.each(function(index, element) {
-      $(element).attr('data-foto-overlay', index);
-      var overIMG = $( element ).children('img').attr('src');
-      var addCSS = '*[data-foto-overlay="'+ index +'"]:before { background-image: url(\''+ overIMG +'\'); }';
-      $('style[data-f-over-css]').append(addCSS);
-    }); 
+		// Checando se o elemento é maior ou menor que o tamanho original da imagem
+		fotoOverlay.prototype.config = function(elem, img, width) {
+			var width = width || 0;
 
-  }; 
-})( jQuery );
+			if(width != img.clientWidth) {	
+				width = img.clientWidth;
+				if(elem.clientWidth >= img.naturalWidth) {
+					elem.setAttribute('data-effect', 'true');
+				} else {
+					elem.setAttribute('data-effect', 'false');
+				}			
+			}
+			
+			setTimeout(function() { self.config(elem, img, width); }, 10);
+		}
+
+		// Checando se o elemento existe antes de iniciar a função
+		if(ctn.length > 0) self.start();
+	}
+})();
