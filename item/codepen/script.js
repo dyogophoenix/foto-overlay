@@ -9,13 +9,11 @@
 			pt : {
 				btnSM : 'Menor que a foto',
 				btnOG : 'Tamanho original',
-				btnMD : 'Zona segura',
 				btnLG : 'Maior que a foto'
 			},
 			en : {
 				btnSM : 'Smaller than photo',
 				btnOG : 'Original Photo size',
-				btnMD : 'Security Zone',
 				btnLG : 'Bigger than photo'
 			} 
 		}
@@ -50,12 +48,10 @@
 
 		var btnSM = createBTN({ id : 'small', text : lang.btnSM });
 		var btnOG = createBTN({ id : 'original', text : lang.btnOG });
-		var btnMD = createBTN({ id : 'medium', text : lang.btnMD });
 		var btnLG = createBTN({ id : 'large', text : lang.btnLG });
 		
 		btns.appendChild(btnSM);
 		btns.appendChild(btnOG);
-		btns.appendChild(btnMD);
 		btns.appendChild(btnLG);
 		section.appendChild(btns);
 	}
@@ -67,7 +63,6 @@
 
 		var btnSM = document.getElementById('small');
 		var btnOG = document.getElementById('original');
-		var btnMD = document.getElementById('medium');
 		var btnLG = document.getElementById('large');
 
 		switch(size) {
@@ -77,8 +72,6 @@
 		    case 'original':
 		        btnOG.setAttribute('class', 'active');
 		        break;
-		    case 'medium':
-		        btnMD.setAttribute('class', 'active');
 		        break;
 		    case 'large':
 		        btnLG.setAttribute('class', 'active');
@@ -101,14 +94,6 @@
 			btnMD.removeAttribute('class');
 			btnLG.removeAttribute('class');
 			artigo.setAttribute('data-size', 'original');
-		}
-		
-		btnMD.onclick = function() {
-			this.setAttribute('class', 'active');
-			btnSM.removeAttribute('class');
-			btnOG.removeAttribute('class');
-			btnLG.removeAttribute('class');
-			artigo.setAttribute('data-size', 'medium');
 		}
 		
 		btnLG.onclick = function() {
