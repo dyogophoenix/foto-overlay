@@ -1,119 +1,126 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8"> 
+	<!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Foto Overlay</title>
+	
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700|Rancho:400" rel="stylesheet" />
 
-    <meta name="robots" content="index, follow" />
-    <meta name="revisit-after" content="1 day" />
-    <meta name="rating" content="general" />
-
-    <title>Foto overlay</title>
-    <meta name="description" content="O Foto Overlay é um script que possui o objetivo de recriar a mesma foto em forma de uma overlay, fazendo assim, com que toda a área disponivel para exibição da foto será devidamente preenchida mesmo que ela possua um tamanho inferior.">
-    <meta name="keywords" content="script, javascript, dyogo, phoenix, dyogophoenix, dyogo phoenix, imagem, foto, picture, screen, overlay, full image"/>
-    <meta name="author" content="Dyogo Phoenix" />
-
-    <meta name="canonical" content="http://foto-overlay.com.br/" />
-
-
-    <link href="http://fonts.googleapis.com/css?family=Bree+Serif:400" rel="stylesheet" type="text/css" />
-    <link href="http://fonts.googleapis.com/css?family=Signika:300,600" rel="stylesheet" type="text/css" />
-
-  
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
-    <link href="./itens/css/animate.min.css" rel="stylesheet" />
-    <link href="./itens/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="./itens/css/foto-overlay.min.css" rel="stylesheet" />
-    <link href="./itens/css/estilo.css" rel="stylesheet" />
-
-
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+  <link rel="stylesheet" href="./item/foto-overlay.min.css" />
+	<link rel="stylesheet" href="./item/estilo.min.css">
 </head>
-<body>
-<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
-      <span class="sr-only">Toggle navigation</span>
-    </button>
-    <a class="navbar-brand" href="https://github.com/dyogophoenix/" target="_blank"><img src="./itens/img/logo.png" alt=""></a>
-  </div>
-  <div class="collapse navbar-collapse" id="navbar-collapse-01">    
+<body class="blue-grey blue-grey-text text-lighten-5">
 
-    <ul class="nav navbar-nav navbar-right">
-      <li class="active"><a href="javascript:void(0);">Inicio</a></li>
-      <li><a href="./como-usar.html">Como usar</a></li>
-      <li><a href="./compare.html">Compare</a></li>
-      <li><a href="./baixar.html">Baixar</a></li>
-    </ul>
+	<div id="preloader" class="blue-grey lighten-5 valign-wrapper">
+		<div class="progress blue-grey lighten-2">
+			<div class="indeterminate blue-grey darken-2"></div>
+		</div>
+	</div>
 
-  </div><!-- /.navbar-collapse -->
-  </div>
-</nav><!-- /navbar -->
+ 	<!-- Navbar goes here -->
+ 	<div class="navbar-fixed">
+ 		<nav>
+			<div class="nav-wrapper blue-grey lighten-5">
+			  <a href="#" class="brand-logo">Foto Overlay</a>
 
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+				    <li><a href="#sobre">[[Menu.Botao1]]</a></li>
+				    <li><a href="#start">[[Menu.Botao2]]</a></li>
+				    <li><a href="#exemplo">[[Menu.Botao3]]</a></li>
+				    <li><a href="https://github.com/dyogophoenix/foto-overlay/archive/master.zip" class="waves-effect waves-light btn-large green lighten-2 white-text">[[Menu.Botao4]]</a></li>  
+			  	</ul>
 
+			</div>
+		</nav>
+ 	</div>
 
+	<main id="conteudo" class="clearfix">
+		<section id="sobre" class="scrollspy section clearfix">
+			<div class="container">
+				<h3 class="white-text">[[Sobre.Title]]</h3>
+				<div class="caption pre-line">[[Sobre.Caption]]</div>
+				<a href="https://github.com/dyogophoenix/foto-overlay" class="btn-large hoverable yellow darken-4">[[Sobre.Botao1]]</a>
+				<a href="#exemplo" class="btn-large hoverable blue darken-1">[[Sobre.Botao2]]</a>
+			</div>
+		</section>
 
-<main class="clearfix">
+		<section id="start" class="scrollspy reverse blue-grey darken-2 section clearfix">
+			<div class="container">
+				<h3 class="white-text">[[Usar.Title]]</h3>
+				<div class="caption pre-line">
+					[[Usar.Caption1]]
+					<div class="code-gist">
+						<script src="https://gist.github.com/dyogophoenix/a4cb45454bd42f2a8c1f.js"></script>
+					</div>
 
-<!-- Conteudo -->
+					[[Usar.Caption2]]
+					<div class="code-gist">
+						<script src="https://gist.github.com/dyogophoenix/ca3218364169ab0d443d.js"></script>
+					</div>
+				</div>
+			</div>
+		</section>
 
-<div class="container-fluid sessao">
-    <section class="col-xs-12 col-xs-offset-0 col-sm-12 col-sm-offset-0 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+		<section id="exemplo" class="scrollspy section sessao clearfix">
+			<div class="container">
+				<h3 class="center">[[Exemplo.Title]]</h3>
+				<div class="card card-1 block-center">
+					
+					<div class="card-header">
+						<h4>[[Card.Title]]</h4>
+					</div>
+					
+					<div class="card-image">
+					  <figure class="thumb foto-overlay">
+					  	<img src="./item/foto.gif" alt="" />
+					  </figure>
+					</div>
 
-      <h2 class="text-center">O que é Foto Overlay ?</h2>
-      <div class="row">
-      <figure class="foto-overlay"><img src="./itens/img/fotos/foto01.jpg" alt=""></figure>
-    </div>
+					<div class="card-content">
+					  <p>[[Card.Caption]]</p>
+					</div>
 
-    <div class="texto">O <b>Foto Overlay</b> é um script feito por <a href="https://github.com/dyogophoenix" target="_blank">Dyogo Phoenix</a> e que possui o objetivo de recriar a mesma foto em forma de uma overlay, fazendo assim, com que o espaçamento da foto seja completamente utilizado mesmo que ela possua tamanho inferior a área disponível.</div>
-      
-      <div class="well">
-      <h4>Termos de uso do script:</h4>
-      <div class="texto">Você pode usar o <b>Foto Overlay</b> gratuitamente, desde que, você respeite os seguintes termos de uso:
-      
-      Ao utilizar o <b>Foto Overlay</b> em seu site você concorda com os termos de uso da licença <a href="http://creativecommons.org/licenses/by-nd/4.0/deed.pt_BR" target="_blank">(CC) BY-NC-ND</a> do <a href="http://creativecommons.org/" target="_blank">Creative Commons</a> que permite que você copie e redistribua o script em qualquer suporte ou formato (mesmo em sites comerciais), desde que, caso você pense em modificar, transformar e/ou criar algo a partir deste material, você não o distribua a terceiros e não altere os créditos já existentes.
-      
-      Em caso de maiores dúvidas envie um email para: <a href="mailto:email@dyogophoenix.com.br">email@dyogophoenix.com.br</a></div>
-      
-      <div class="clearfix"></div>
-      </div>
-    
-    <div class="doacao">
-      <!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
-        <form class="pull-right" action="https://pagseguro.uol.com.br/checkout/v2/donation.html" method="post">
-        <!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
-        <input type="hidden" name="currency" value="BRL" />
-        <input type="hidden" name="receiverEmail" value="trabalhos@dyogophoenix.com.br" />
-        <input type="image" src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/doacoes/120x53-doar-preto.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
-        </form>
-        <!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
-        <div class="clearfix"></div>
-    </div>
-    
-    
-    </section>
-  </div>
+					<div class="card-action center-align">
+					  <a href="#" class="redimensionar btn-large" data-width="539px">[[Card.BtnSm]]</a>
+					  <a href="#" class="redimensionar btn-large active" data-width="100%">[[Card.BtnLg]]</a>
+					  
+					</div>
+				</div>
+			</div>
+		</section>
 
-<!-- Conteudo -->
+		<section id="download" class="scrollspy reverse blue-grey darken-2 section clearfix">
+			<div class="container">
+				<h3 class="center">[[Download.Title]]</h3>
+				<div class="caption">
+					[[Download.Caption]]
 
+					<div class="section via-git">
+						<div class="code-gist">
+							<script src="https://gist.github.com/dyogophoenix/6d2e045ada1e1dd8413dfc9479825233.js"></script>
+						</div>
+					</div>
 
-</main>
+					<div class="section direto">
+						<h5>[[Download.BtnTitle]]</h5>
+						<a href="https://github.com/dyogophoenix/foto-overlay" target="_blank" class="btn-large">[[Download.Button1]]</a>
+						<a href="https://github.com/dyogophoenix/foto-overlay/archive/master.zip" class="btn-large">[[Download.Button2]]</a>
+					</div>
 
-<script src="./itens/js/jquery.js"></script>
-<script src="./itens/js/bootstrap.min.js"></script>
-<script src="./itens/js/foto-overlay.min.js"></script>
-<script src="./itens/js/wow.min.js"></script>
-<script>
-  new fotoOverlay();
-  new WOW().init();
-  console.log('Criado por Dyogo Phoenix www.dyogophoenix.com.br');
-</script>
+				</div>
+			</div>
+		</section>
+	</main>
+
+<script src="./item/translate.js"></script>
+<script src="./item/foto-overlay.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="./item/jquery.min.js"></script>
+<script src="./item/materialize.min.js"></script>
+<script src="./item/scripts.min.js"></script>
 </body>
 </html>
