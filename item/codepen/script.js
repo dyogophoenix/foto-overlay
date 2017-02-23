@@ -83,7 +83,6 @@
 		btnSM.onclick = function() {
 			this.setAttribute('class', 'active');
 			btnOG.removeAttribute('class');
-			btnMD.removeAttribute('class');
 			btnLG.removeAttribute('class');
 			artigo.setAttribute('data-size', 'small');
 		}
@@ -91,7 +90,6 @@
 		btnOG.onclick = function() {
 			this.setAttribute('class', 'active');
 			btnSM.removeAttribute('class');
-			btnMD.removeAttribute('class');
 			btnLG.removeAttribute('class');
 			artigo.setAttribute('data-size', 'original');
 		}
@@ -99,7 +97,6 @@
 		btnLG.onclick = function() {
 			this.setAttribute('class', 'active');
 			btnOG.removeAttribute('class');
-			btnMD.removeAttribute('class');
 			btnSM.removeAttribute('class');
 			artigo.setAttribute('data-size', 'large');
 		}
