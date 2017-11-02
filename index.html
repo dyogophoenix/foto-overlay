@@ -1,122 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-	<meta charset="UTF-8"> 
-	<!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<title>Foto Overlay 1</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<title>Foto Overlay</title>
 	
-	<!--Import Google Icon Font-->
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700|Rancho:400" rel="stylesheet" />
-
-  <link rel="stylesheet" href="./item/foto-overlay.min.css" />
-	<link rel="stylesheet" href="./item/estilo.min.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Patua+One:400" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Signika:300,400,600" rel="stylesheet" />
+	<link href="./item/css/foto-overlay.css" rel="stylesheet" />
 </head>
-<body class="blue-grey blue-grey-text text-lighten-5">
-
-	<div id="preloader" class="blue-grey lighten-5 valign-wrapper">
-		<div class="progress blue-grey lighten-2">
-			<div class="indeterminate blue-grey darken-2"></div>
+<body>
+	
+<div id="layout">
+	<aside>
+		<div class="icon">
+			<img src="./item/img/camera.png" alt="" />
+			<h1>Foto Overlay</h1>
 		</div>
-	</div>
+		<ul class="menu">
+			<li class="atual"><a href="./">O que é Foto Overlay</a></li>
+			<li><a href="./como-usar.html">Como usar</a></li>
+			<li><a href="./exemplos.html">Exemplos</a></li>
+		</ul>
+	</aside>
 
- 	<!-- Navbar goes here -->
- 	<div class="navbar-fixed">
- 		<nav>
-			<div class="nav-wrapper blue-grey lighten-5">
-			  <a href="#" class="brand-logo">Foto Overlay</a>
-
-				<ul id="nav-mobile" class="right hide-on-med-and-down">
-				    <li><a href="#sobre">[[Menu.Botao1]]</a></li>
-				    <li><a href="#start">[[Menu.Botao2]]</a></li>
-				    <li><a href="#exemplo">[[Menu.Botao3]]</a></li>
-				    <li><a href="https://github.com/dyogophoenix/foto-overlay/archive/master.zip" class="waves-effect waves-light btn-large green lighten-2 white-text">[[Menu.Botao4]]</a></li>  
-			  	</ul>
-
+	<main>
+		<section id="intro" class="box clearfix">
+			<h2>O que é o Foto Overlay</h2>
+			<div class="caption pre-line">
+				O <b>Foto Overlay</b> é um script que detecta quando a imagem fica menor do que a área do <code>&lt;figure&gt;</code> e exibe uma overlay utilizando a mesma imagem para que todo o espaço seja ocupado, como pode ser conferido no exemplo abaixo:
 			</div>
-		</nav>
- 	</div>
+			
+			<figure class="foto-overlay">
+				<img src="https://dyogophoenix.github.io/foto-overlay/item/foto.gif" alt="">
+			</figure>
 
-	<main id="conteudo" class="clearfix">
-		<section id="sobre" class="scrollspy section clearfix">
-			<div class="container">
-				<h3 class="white-text">[[Sobre.Title]]</h3>
-				<div class="caption pre-line">[[Sobre.Caption]]</div>
-				<a href="https://github.com/dyogophoenix/foto-overlay" class="btn-large hoverable yellow darken-4">[[Sobre.Botao1]]</a>
-				<a href="#exemplo" class="btn-large hoverable blue darken-1">[[Sobre.Botao2]]</a>
+			<div class="caption pre-line">No inicio o script foi criado em jQuery, mas com o passar do tempo fui adaptando o código para que o mesmo funcione utilizando apenas <b>Javascript puro</b>, tornando assim, sua execução bem mais leve e compatível com os mais diversos navegadores disponíveis atualmente na web.				
 			</div>
-		</section>
 
-		<section id="start" class="scrollspy reverse blue-grey darken-2 section clearfix">
-			<div class="container">
-				<h3 class="white-text">[[Usar.Title]]</h3>
-				<div class="caption pre-line">
-					[[Usar.Caption1]]
-					<div class="code-gist">
-						<script src="https://gist.github.com/dyogophoenix/a4cb45454bd42f2a8c1f.js"></script>
-					</div>
+			<div class="baixar">
+				<h4>Baixe agora o script:</h4>
+				<div class="code-gist">
+					<script src="https://gist.github.com/dyogophoenix/6d2e045ada1e1dd8413dfc9479825233.js"></script>
+				</div>
 
-					[[Usar.Caption2]]
-					<div class="code-gist">
-						<script src="https://gist.github.com/dyogophoenix/ca3218364169ab0d443d.js"></script>
-					</div>
+				<div class="direto">
+					<h4>Ou se preferir ...</h4>
+					<a href="https://github.com/dyogophoenix/foto-overlay" target="_blank" class="btn btn-blue">Via repositório</a>
+					<a href="https://github.com/dyogophoenix/foto-overlay/archive/master.zip" class="btn btn-blue">foto-overlay.zip</a>
 				</div>
 			</div>
-		</section>
 
-		<section id="exemplo" class="scrollspy section sessao clearfix">
-			<div class="container">
-				<h3 class="center">[[Exemplo.Title]]</h3>
-				<div class="card card-1 block-center">
-					
-					<div class="card-header">
-						<h4>[[Card.Title]]</h4>
-					</div>
-					
-					<div class="card-image">
-					  <figure class="thumb foto-overlay">
-					  	<img src="./item/foto.gif" alt="" />
-					  </figure>
-					</div>
-
-					<div class="card-content">
-					  <p>[[Card.Caption]]</p>
-					</div>
-
-					<div class="card-action center-align">
-					  <a href="#" class="redimensionar btn-large" data-width="539px">[[Card.BtnSm]]</a>
-					  <a href="#" class="redimensionar btn-large active" data-width="100%">[[Card.BtnLg]]</a>
-					  
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section id="download" class="scrollspy reverse blue-grey darken-2 section clearfix">
-			<div class="container">
-				<h3 class="center">[[Download.Title]]</h3>
-				<div class="caption">
-					[[Download.Caption]]
-
-					<div class="section via-git">
-						<div class="code-gist">
-							<script src="https://gist.github.com/dyogophoenix/6d2e045ada1e1dd8413dfc9479825233.js"></script>
-						</div>
-					</div>
-
-					<div class="section direto">
-						<h5>[[Download.BtnTitle]]</h5>
-						<a href="https://github.com/dyogophoenix/foto-overlay" target="_blank" class="btn-large">[[Download.Button1]]</a>
-						<a href="https://github.com/dyogophoenix/foto-overlay/archive/master.zip" class="btn-large">[[Download.Button2]]</a>
-					</div>
-
-				</div>
-			</div>
 		</section>
 	</main>
+</div>
 
-<script src="./item/foto-overlay.min.js"></script>
-<script src="./item/scripts.min.js"></script>
+<script src="./item/js/foto-overlay.js"></script>
+<script>
+(function() {
+	
+	// window.addEventListener('load', function() {
+		var ov = new fotoOverlay();
+
+		ov.destroy();
+	// });
+})();
+</script>
 </body>
 </html>
