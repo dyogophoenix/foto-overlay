@@ -76,7 +76,7 @@ function fotoOverlay( elm ) {
 		}
 		
 		setTimeout(function() {
-			if(!opts.destroy) self.config(el, img);
+			self.config(el, img);
 		}, 400);
 	}
 
