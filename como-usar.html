@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<title>Foto Overlay</title>
+	
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Patua+One:400" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Signika:300,400,600" rel="stylesheet" />
+	<link href="./item/css/foto-overlay.css" rel="stylesheet" />
+</head>
+<body>
+	
+<div id="layout">
+	<aside>
+		<div class="icon">
+			<img src="./item/img/icon.png" alt="" />
+			<h1>Foto Overlay</h1>
+		</div>
+		<ul class="menu">
+			<li><a href="./">O que é Foto Overlay</a></li>
+			<li class="atual"><a href="javascript:void(0)">Habilitando em seu website</a></li>
+			<li><a href="https://codepen.io/dyogophoenix/full/ZGpBGp" target="_blank">Ver Demonstração <span class="small">( via Codepen )</span></a></li>
+			<li><a href="https://dyogophoenix.com.br/contato" target="_blank">Informar erros/sugestões</a></li>
+		</ul>
+	</aside>
+
+	<main>
+		
+		<section id="como-usar" class="box clearfix">
+			<h2>Habilitando em seu website</h2>
+			<figure class="foto-overlay">
+				<img src="./item/img/foto.jpeg" alt="">
+			</figure>
+			<div class="caption">
+				<div class="pre-line">Para habilitar o <b>Foto Overlay</b> em seu website é bem simples, tudo o que você precisa fazer é ir até a sua página e adicionar os códigos demonstrados abaixo em suas respectivas áreas:
+				</div>
+				<div class="code-gist">
+					<script src="https://gist.github.com/dyogophoenix/a4cb45454bd42f2a8c1f.js"></script>
+				</div>
+				<div class="pre-line">
+					Após habilitar o <b>Foto Overlay</b> em sua página, tudo o que você precisa fazer é chamar suas fotos utilizando o seguinte formato HTML demonstrado abaixo:
+				</div>
+				<div class="code-gist">
+					<script src="https://gist.github.com/dyogophoenix/ca3218364169ab0d443d.js"></script>
+				</div>
+				<div class="pre-line small"><b>OBS:</b> Substitua <code>IMG_URL</code> pela URL da foto desejada.
+				</div>
+				<blockquote class="pre-line text-center large">Se você seguiu todos esses passos, o script deve estar funcionando em seu website.
+				</blockquote>
+			</div>
+		</section>
+	</main>
+</div>
+
+<script src="./item/js/foto-overlay.js"></script>
+<script>
+(function() {
+	new fotoOverlay();
+})();
+</script>
+</body>
+</html>
