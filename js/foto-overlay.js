@@ -25,10 +25,13 @@ function fotoOverlay( elm ) {
 
 	// Criando um <style> exclusivo para incluir o CSS do script
 	self.myCSS = function(css) {
-		var style = d.createElement('style');
-			style.setAttribute('data-css', 'foto-overlay');
-			d.querySelector('head').appendChild(style);
-			return style;
+		var style = d.querySelector('style[data-fo-css]');
+		if(!style) {
+			var style = d.createElement('style');
+				style.setAttribute('data-fo-css', 'foto-overlay');
+				d.querySelector('head').appendChild(style);
+		}
+		return style;
 	}
 
 	// Adiciona o código CSS no <style> exclusivo
@@ -52,13 +55,22 @@ function fotoOverlay( elm ) {
 		}
 	}
 
+	self.Number = function(el, img, callback, count) {
+		count = count > 0 ? count : 1;
+		for (var i = 0; i < ctn.length; i++) {
+			if( ctn[i].getAttribute('data-foto-overlay') ) { count++; }
+		}
+		if(!el.getAttribute('data-foto-overlay') && callback) { callback(el,img,count); }
+	}
+
 	// Inicia o script com todas as configurações verificadas
 	self.exec = function(el, img) {
-		var num = el.number + 1;
-		el.setAttribute('data-foto-overlay', num);
-		var photo = img.getAttribute('src');
-		self.addCSS(el.tagName.toLowerCase() +'[data-foto-overlay="'+ num +'"] { background-image: url(\''+ photo +'\') !important; }');
-		self.config(el,img);
+		self.Number(el, img, function(el, img, num) {
+			el.setAttribute('data-foto-overlay', num);
+			var photo = img.getAttribute('src');
+			self.addCSS(el.tagName.toLowerCase() +'[data-foto-overlay="'+ num +'"] { background-image: url(\''+ photo +'\') !important; }');
+			self.config(el,img);
+		});		
 	}
 
 	// Configura o efeito no elemento correspondente
